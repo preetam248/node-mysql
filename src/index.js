@@ -20,7 +20,7 @@ app.get("/check-up", (req, res) => {
 });
 
 const schoolRouter = require("./routes/schools.routes")
-app.use("/api", schoolRouter);
+app.use("/api/v1", schoolRouter);
 
 mysqlPool
   .query("SELECT 1")
