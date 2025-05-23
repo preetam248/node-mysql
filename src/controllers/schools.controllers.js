@@ -18,6 +18,7 @@ const addSchool = async (req, res) => {
       .json({ message: "School added", schoolId: result.insertId });
   } catch (error) {
     res.status(500).json({ error: error.message });
+    console.log("Error in add school API", error.message);
   }
 };
 
@@ -47,6 +48,7 @@ const listSchools = async (req, res) => {
     res.json(sortedSchools);
   } catch (error) {
     res.status(500).json({ error: error.message });
+    console.log("Error in list school API", error.message);
   }
 };
 
